@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section > h2 { 
+            color: red;
+        }
+        /*
+        부등호 '>'를 없애면 apple~네비게이션까지 먹힘
+        부등호 '>'를 입력하면 apple만 먹힘*/
+        section nav h2 {
+            color: blue;
+        }
+        article div p {
+            color: blueviolet;
+        }
+        /*
+        article의 div의 p를 바이올렛색상으로 바꾸는 말임
+        만약 article p를 쓴다면 article 아래의 p는 모두 바이올렛 색상으로 바뀜*/
+        
+        /* 
+        A의 모든 후손 B
+        A B { ... }
+        
+        A의 직계 자식 B
+        A > B { ... } */
+    </style>
+
+</head>
+<body>
+    <article>
+        <section>
+            <h2>APPLE</h2>
+            <nav>
+                <h2>네비게이션</h2>
+                <p>회원가입</p>
+            </nav>
+        </section>
+
+        <div>
+            <h2>배너</h2>
+            <p>상품 상세설명</p>
+        </div>
+    </article>
+</body>
+</html>

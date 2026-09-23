@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            /* reset */
+            * {
+                margin: 0;
+                padding: 0;}
+
+                
+            div {
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+                font-weight: bold;
+            }
+            div:nth-child(1) {
+                background-color: red;
+            }
+            div:nth-child(2) {
+                background-color: blueviolet;
+                margin: 20px;
+                /* margin: 20px 10px 0 5px; */
+                /* margin 순서: top, right, bottom, left. 위에서부터 시계방향으로 돌아감 */
+                /* margin-top: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px; */
+            }
+            div:nth-child(3) {
+                background-color: aqua;
+                padding: 20px;
+                /*
+                margin은 부모가 자식을 감싸는 것.
+                padding은 자식이 부모를 감싸는 것
+                */
+            }
+            div:nth-child(4) {
+                background-color: chocolate;
+                border: 10px solid #000;
+                /* border의 선은 outline이 기본임*/
+            }
+            div:nth-child(5) {
+                background-color: darkcyan;
+                margin: 20px;
+                padding: 20px;
+                border: 10px solid #000;
+            }
+            /* 
+            total width = box의 width값 + (margin + padding + border)x2
+            */
+            #big {
+                width: 140px;
+                height: 140px;
+                background-color: skyblue;
+                padding: 30px;
+                /* 패딩을 넣으면 사방으로 30px이 크기가 추가됨. 그래서 width와 height값에서 늘어난 padding 값을 빼줘야함 */
+            }
+            #small {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div>BOX1</div>
+        <div>BOX2</div>
+        <div>BOX3</div>
+        <div>BOX4</div>
+        <div>BOX5</div>
+
+        <section id="big">
+            <section id="small">BOX</section>
+        </section>
+    </body>
+</html>

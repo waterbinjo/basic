@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-family: "Helvetica";
+        }
+        .font16 {
+            font-size: 16px;
+        }
+        .font24 {
+            font-size: 24px;
+        }
+        .font36 {
+            font-size: 36px;
+        }
+        .font48 {
+            font-size: 48px;
+        }
+
+        .font_1em {
+            font-size: 1em;
+        }
+        .font_2em {
+            font-size: 2em;
+        }
+        .font_3em {
+            font-size: 3em;
+        }
+        .font_4em {
+            font-size: 4em;
+        }
+        /*
+        현재 : 1em = 16px
+        em은 div의 폰트 크기를 기준으로 숫자가 올라갈 수록 곱해짐
+        만약 div가 <div fon-size: 10px>이라면 em의 숫자가 올라갈 수록 10px이 곱해지는 것
+        em이 상대값이라면 위에처럼 px은 절대값임 고정
+        */
+
+        .font_1rem {
+            font-size: 1rem;
+        }
+        .font_2rem {
+            font-size: 2rem;
+        }
+        .font_3rem {
+            font-size: 3rem;
+        }
+        .font_4rem {
+            font-size: 4rem;
+        }
+
+        .font_attr {
+            font-family: "궁서체";
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            /* 축약형. 축약형이 더 많이 쓰니까 축약형으로 연습하기
+            순사: 스타일 > 속성값(스타일이 먼저)
+            근데 이렇게 폰트를 쓰는 건 내 컴퓨터에 있는 폰트를 불러오는 거임
+            남들은 이 폰트가 없으면 폰트가 깨짐. -> 15wedfont.html에서 이어짐 */
+            font: blod italic 20px "궁서체";
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 기본 사이즈</p>
+    <p class="font16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 16px</p>
+    <p class="font24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 24px</p>
+    <p class="font36">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 36px</p>
+    <p class="font48">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 48px</p>
+<hr>
+    <div>
+        <p class="font_1em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 1em</p>
+        <p class="font_2em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 2em</p>
+        <p class="font_3em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 3em</p>
+        <p class="font_4em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 4em</p>
+    </div>
+<hr>
+    <div>
+        <p class="font_1rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 1rem</p>
+        <p class="font_2rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 2rem</p>
+        <p class="font_3rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 3rem</p>
+        <p class="font_4rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. - 4rem</p>
+    </div>
+<hr>
+    <p class="font_attr">글자의 여러가지 속성 알아보기</p>
+
+</body>
+</html>

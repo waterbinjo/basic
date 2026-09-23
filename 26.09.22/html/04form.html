@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>입력 방식</title>
+    </head>
+    <body>
+        <from>
+            아이디 : <input type="text" />
+            비밀번호 : <input type="password" />
+        </from>
+        <form action="">
+            <input type="text" /> - 이름 <input type="text" /> - 학번
+        </form>
+
+        <hr>
+        <form action="">
+            <label for="">아이디</label>
+            <input type="text" id="user"/>
+            <!-- 라벨, 인풋 이렇게 세트임 -->
+            <br>
+            <!-- 라벨, 인풋은 둘 다 인라인 속성이라 br로 강제 줄바꿈 -->
+            <label for="">비밀번호</label>
+            <input type="password" id="pass"/>
+        </form>
+
+        <hr>
+        <form>
+            <fieldset>
+            <!-- 필드셋은 관련된 폼 요소들을 그룹화함 -->
+            <legend>회원가입</legend>
+            <!-- 레전드는 필드셋의 제목을 나타냄 -->
+            <!-- input type="" 따옴표 안에서 ctrl+space 누르면 input 태그의 종류들이 나옴 -->
+            아이디: <input type="text"><br>
+            패스워드 : <input type="password"><br>
+            이메일 : <input type="email"><br>
+            URL : <input type="url"><br>
+            전화번호: <input type="tel"><br>
+            색상 : <input type="color"><br>
+            월 : <input type="month"><br>
+            날짜 : <input type="date"><br>
+            주 : <input type="week"><br>
+            시간 : <input type="time"><br>
+            지역시간 : <input type="datetime-local"><br>
+            숫자 : <input type="number" min="200" max="320" step="5"><br>
+            범위 : <input type="range" min="0" max="10" step="2"><br>
+            <!-- 숫자, 범위는 min, max, step 속성을 통해 범위와 증감값을 설정할 수 있음 -->
+            <input type="submit" value="제출">
+            <!--
+            form 안에 있는 걸 submit으로 제출한다는 것.
+            value 속성은 버튼에 표시될 텍스트를 지정함.
+            -->
+            <input type="reset" value="초기화">
+            <!-- reset은 입력한 값을 초기화하는 버튼 -->
+            <input type="button" value="버튼">
+            <!-- 버튼은 클릭해도 아무런 기능이 없음 -->
+            </fieldset>
+        </form>
+        <button>버튼</button>
+        <button onclick="alert('안녕하세요')"><img src="../img/button.png" alt="" width="200"</button>
+        <!--
+        버튼 태그에 이미지를 넣을 수도 있음
+        onclick 속성에 자바스크립트 코드("alert('안녕하세요')")를 넣으면 버튼 클릭 시 동작함
+        자바스크립트 코드를 넣을 때는 안에 ''를 넣어야 함. "안녕하세요"라고만 넣으면 오류남
+        -->
+    </body>
+</html>

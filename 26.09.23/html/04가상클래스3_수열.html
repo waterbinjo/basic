@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+            /* 리스트의 스타일을 초기화 */
+            width: 100px;
+            /* 단축키 w100 */
+            height: 50px;
+            /* 단축키 h50 */
+            background-color: #308930;
+            color: #fff;
+            border: 1px solid #000;
+            /* 보더를 1픽셀의 실선으로 하고 색상은 검정색 */
+            text-align: center;
+            /* 텍스트를 표의 가운데정렬 */
+            line-height: 50px;
+            /* 표의 가운데 넣고 싶어서 텍스트의 행간을 표의 칸과 똑같이 설정(위에 height를 50px으로 했음) */
+            float: left;
+            /* 표를 왼쪽 정렬 */
+        }
+        li:first-child {
+            border-radius: 20px 0 0 20px}
+            /* 단축키: borr. 표의 첫번째칸만 왼쪽위, 왼쪽아래만 둥글게 한다는 뜻 */
+        li:nth-child(2n-1) {
+            background-color: red;
+        }
+            /* 홀수칸만 배경색 빨강. (2n-1)은 숫자 2n에서 1를 빼겠다는 것. 'odd'를 넣는 것도 가능.*/
+        li:nth-child(2n) {
+            background-color: blue;
+            /* 짝수칸만 배경색 파랑. (2n)에서 아무것도 빼지 않으니 짝수. 'even'을 넣는 것도 가능. */
+        }
+        li:last-child {
+            border-radius: 0 20px 20px 0
+            /* 단축키: borr. 표의 마지막칸만 오른쪽위, 오른쪽아래만 둥글게 한다는 뜻 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>meun01</li>
+        <li>meun02</li>
+        <li>meun03</li>
+        <li>meun04</li>
+        <li>meun05</li>
+        <li>meun06</li>
+    </ul>
+    
+    <!-- alt+shift 누르고 클릭하면 그부분만 합쳐서 수정 가능 -->
+</body>
+</html>

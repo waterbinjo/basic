@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 항상 초기화부터 시작함 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 마진, 패딩을 주지 않음 */
+        li { list-style: none; }
+        /* 리스트의 스타일을 주지 않음 */
+        a { text-decoration: none; }
+        /* 텍스트에 밑줄 등을 없앤다는 것 */
+
+
+        h1 {
+            color: yellow;
+            background-color: black;
+        }
+        h1:hover {
+            color:black;
+            background-color: yellow;
+        }
+
+        /* 의사 선택자<hover>. 커서가 닿으면 호버의 색상으로 변경됨 */
+        a {
+            color: pink;
+            background-color: gray;
+        }
+        a:hover { 
+            color: gray;
+            background-color: pink;
+        }
+
+        /* 속성 선택자[type="속성이름"] 여러 인풋 중 타입의 속성이름에 해당되는 것만 변경 */
+        input[type="text"]{
+            background-color: orange;
+        }
+        input[type="password"]{
+            background-color: greenyellow;
+        }
+
+        /* 테이블 border-collapse, 선 굵기 px, 실선 solid, 컬러 */
+        table {
+            border-collapse: collapse;
+            color: white;
+        }
+        td {
+            border: 2px solid black;
+        }
+        
+        table .red {
+            background-color: red;
+        }
+        table .blue {
+            background-color: blue;
+        }
+        /*
+        class = '.'으로 표시. 테이블에서 해당 클래스 이름을 스타일 먹힌다는 뜻
+         */
+    </style>
+</head>
+
+<body>
+    <h1>Nevigation</h1>
+    <!-- ul>li*4{menu$$} -->
+    <ul>
+        <li><a href="#">menu01</a></li>
+        <li><a href="#">menu02</a></li>
+        <li><a href="#">menu03</a></li>
+        <li><a href="#">menu04</a></li>
+    </ul>
+
+    <form>
+        이름: <input type="text"><br>
+        비밀번호: <input type="password">
+    </form>
+
+    <!-- table>tr*4>td*3{테이블$$} -->
+    <table>
+        <tr class="red">
+            <td>테이블01</td>
+            <td>테이블02</td>
+            <td>테이블03</td>
+        </tr>
+        <tr class="blue">
+            <td>테이블01</td>
+            <td>테이블02</td>
+            <td>테이블03</td>
+        </tr>
+        <tr class="red">
+            <td>테이블01</td>
+            <td>테이블02</td>
+            <td>테이블03</td>
+        </tr>
+        <tr class="blue">
+            <td>테이블01</td>
+            <td>테이블02</td>
+            <td>테이블03</td>
+        </tr>
+    </table>
+</body>
+</html>

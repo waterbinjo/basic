@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+
+            text-align: center;
+            line-height: 200px;
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+            text-shadow: 5px 5px 5px #ff000079;
+            /* 텍스트 그림자. 순서: x, y, 블렌드값, 핵사코드 뒤에 2숫자는 불투명도 100% ~ 0% */
+
+            background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+            /*
+            일직선일 경우 to top
+            대각선일 경우 -60deg 등 지정
+            웹 그라디언트 닷컴에서 css code 복,붙
+            */
+            border-radius: 50%;
+            box-shadow: 20px 20px 30px #ff000079;
+            /* 순서: x, y, 블렌드값, 핵사코드 뒤에 2숫자는 불투명도 100% ~ 0% */
+        }
+    </style>
+</head>
+<body>
+    <div>box</div>
+</body>
+</html>

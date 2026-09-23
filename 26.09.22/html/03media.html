@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>오디오, 비디오 가져오기</title>
+    </head>
+    <body>
+        <h1>오디오 가져오기</h1>
+        <audio src="../media/audio.mp3" controls autoplay></audio>
+
+        <h1>비디오 가져오기</h1>
+        <video src="../media/kingsman.mp4" controls width="500" muted loop poster="../img/cat05.jpg"></video>
+        <!-- 오토플레이 빼고, 썸네일 넣은 버전 -->
+        <video src="../media/kingsman.mp4" controls width="500" autoplay muted></video>
+        <!-- 오토플레이 넣고, 썸네일 뺀 버전 -->
+
+        <video controls width="500">
+            <source src="../media/drama.mp4" />
+        </video>
+        <!-- 비디오는 이렇게 속성을 따로 빼놔도 괜찮음 -->
+
+        <!--
+        autoplay는 크롬에서 막아둬서 입력해도 안되는 것
+        다만, 영상에는 muted 뮤트를 입력하면 오토플레이로 재생 가능
+
+        loop poster는 영상이 재생되기 전 보여줄 이미지
+        *포스터 넣을거면 오토플레이는 빼야함
+        -->
+    </body>
+</html>

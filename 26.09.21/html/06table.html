@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>표만들기</title>
+    </head>
+    <body>
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+        <!-- li*3(곱하기 할 숫자) 하면 li가 3개 입력됨-->
+
+        <table border="1">
+            <tr>
+                <td colspan="3">칼라</td>
+                <!-- colspan 표를 가로 병합, 숫자는 몇칸을 병합할 건지 -->
+            </tr>
+            <tr>
+                <td>노랑색</td>
+                <td rowspan="2">100개</td>
+                <!-- rowspan 표를 세로 병합, 숫자는 몇칸을 병합할 건지 -->
+                <td>천호동</td>
+            </tr>
+            <tr>
+                <td>빨간색</td>
+                <td>명일동13-1</td>
+            </tr>
+        </table>
+        <!--
+    row: 행
+    col: 열
+    border는 table 옆에 쓰기: 표 보여줌
+    -->
+        <hr />
+        <table border="1">
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>3333</td>
+                <td>444</td>
+            </tr>
+            <tr>
+                <td>444</td>
+                <td>555</td>
+                <td>666</td>
+                <td>777</td>
+            </tr>
+            <tr>
+                <td>888</td>
+                <td>999</td>
+                <td>1010</td>
+                <td>1111</td>
+            </tr>
+        </table>
+        <!-- table>tr*3>td*3하면 테이블 안에 tr이 3개, 그 안에 td가 3개 입력되라는 뜻. 젠코딩이라고 함 -->
+        <!--
+    해당 입력란에서 alt+방향키 : 위, 아래로 위치 이동
+    tab+shifr : 블럭 왼, 오 위치 이동-->
+        <hr />
+        <table border="1">
+            <caption>
+                아트박스
+            </caption>
+            <!-- caption은 테이블의 가운데에 제목. -->
+            <tr>
+                <th>문구류</th>
+                <!-- th는 테이블의 해딩이라는 뜻 -->
+                <th>수량</th>
+                <th>색상</th>
+            </tr>
+            <tr>
+                <td colspan="3">색종이</td>
+                <td>노랑</td>
+            </tr>
+            <tr>
+                <td>연필</td>
+                <td>300</td>
+                <td>빨강</td>
+            </tr>
+            <tr>
+                <td>지우개</td>
+                <td>300000</td>
+                <td>초록</td>
+            </tr>
+        </table>
+    </body>
+</html>

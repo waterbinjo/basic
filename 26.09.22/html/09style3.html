@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+        /* 선택자 {속성 : 속성값} */
+        h1 {
+            color: red;
+        }
+        #blue {color: blue}
+        /* 동일한 태그에 내/외부 다른 스타일이 적용 된다면, 하위에 입력한 값⭐이 우선 순위로 적용됨
+        <html>스타일 보다 <head>스타일이 먼저 적용되고,
+        <head>스타일 보다 <body>의 스타일이 먼저 적용되고,
+        <body>의 스타일보다 id값이 먼저 적용됨. 다만, id는 전체 html에서 단 한 번만 적용됨
+        여러번 쓰고 싶으면 <class>*/
+        p {
+            color: yellow;
+        }
+        .black {
+            background-color: gray;
+            color: red
+        }
+        </style>
+    </head>
+
+    <body>
+        <h1>안녕하세요</h1>
+        <h2>Hi</h2>
+        <h1 id="blue">헬로</h1>
+        <p>사와디캅</p>
+        <p>캅</p>
+        <p class="black">캅캅</p>
+        <p>캅캅캅</p>
+        <p class="black">캅캅캅캅</p>
+        <p>캅캅캅캅캅</p>
+        <p class="black">캅캅캅캅캅캅</p>
+        <p>캅캅캅캅캅캅캅</p>
+        <p>캅캅캅캅캅캅캅캅</p>
+        <p>캅캅캅캅캅캅캅캅캅</p>
+
+        <!-- 
+        선택자 {속성 : 속성값;}
+        선택자의 종류
+        1) 태그- h1 { ... }
+        2) 아이디- #id { ... }
+        3) 클래스- .class { ... }
+        
+        ⭐아이디, 클래스 이름 만들 때 규칙
+        한글 🚫
+        숫자 + 영문 🚫
+        띄어쓰기 🚫
+        특수문자 🚫
+        첫 글자가 대문자 🚫
+        나중에 알아보기 힘든 이름 🚫
+        
+        영문 + 숫자⭕
+        특수문자 중 _, -⭕
+        다른 사람이 봐도 이해할 수 있게 이름 짓기⭕
+        -->
+    </body>
+</html>

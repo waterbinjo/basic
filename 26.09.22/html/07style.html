@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* 선택자 {속성 : 속성값} */
+        h1 {
+            color: white;
+            background-color: black;
+        }
+        
+        h2 {
+            color: red;
+            background-color: yellow;
+        }
+        /* 동일한 태그에 내/외부 다른 스타일이 적용 된다면, 하위에 입력한 값⭐이 우선 순위로 적용됨
+        <html>스타일 보다 <head>스타일이 먼저 적용되고,
+        <head>스타일 보다 <body>의 스타일이 먼저 적용되고,
+        <body>의 스타일보다 id값이 먼저 적용됨. 다만, id는 전체 html에서 단 한 번만 적용됨 */
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red; background-color: aqua;">스타일시트(css) 만들기</h1>
+    <!--
+    1) 내부 스타일 시트 : html 문서 안의 head 안에 <style> 태그로 작성 : <head><style> ...</style></head>
+    2) 외부 스타일 시트 : style.css 파일을 따로 만들어 <link> 하기, heed 안에 넣기
+    3) 인라인 스타일 시트 : 태그의 속성으로 직접 입력. 하나만 수정하고 싶을 때
+    -->
+
+    <!-- 내부 스타일시트 -->
+    <h2>안녕하세요</h2>
+    <p style="color: aqua">반가워</p>
+    <h3>점심은 먹었어?</h3>
+</body>
+</html>

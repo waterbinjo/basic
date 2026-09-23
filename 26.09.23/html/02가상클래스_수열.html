@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3:hover {
+            color: red;
+        }
+        li {
+            list-style: none;
+            /* li 텍스트에 기본적으로 심볼 붙는 거 없앤다는 뜻 */
+        }
+        li:first-child {
+            color: blue;
+            font-size: 30px;
+            font-weight: bold;
+            /* 단축키: fwb */
+        }
+
+            /*
+            li한테 따로 이름을 class로 지정하지 않고 nth-child로($)로 지정할 수 있음 
+            하지만 첫번째는 first, 마지막은 last로 해두면 li가 추가되어도 첫번째와 마지막 속성값은 고정
+            */
+        li:nth-child(2) {
+            color: #00ffff;
+        }
+        li:nth-child(3) {
+            color: #087e7e;
+        }
+        li:nth-child(4) {
+            color: #ffbb27;
+        }
+        li:nth-child(5) {
+            color: #f58300;
+        }
+        li:nth-child(6) {
+            color: #00f114;
+        }
+        li:nth-child(7) {
+            color: #ff0037;
+        }
+        li:nth-child(8) {
+            color: #860797;
+        }
+        li:nth-child(9) {
+            color: #00ff95;
+        }
+        li:nth-child(10) {
+            color: #eeff00;
+        }
+        li:last-child {
+            color: #00ff55;
+        }
+    </style>
+</head>
+<body>
+    <h2>가상 클래스(의사 클래스)</h2>
+    <h3>마우스 오버</h3>
+
+    <ul>
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+        <li>006</li>
+        <li>007</li>
+        <li>008</li>
+        <li>009</li>
+        <li>010</li>
+    </ul>
+</body>
+</html>

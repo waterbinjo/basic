@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+
+            header {
+                width: 600px;
+                height: 200px;
+                background-color: gray;
+                margin: auto;
+                margin-top: 100px;
+                position: relative;
+                /*
+                절대좌표의 기준점이 header 왼쪽위 끝점으로 지정
+                header가 움직여도 기준점이 header라서 나머지 position도 header를 따라감
+                */
+            }
+            #logo{
+                width: 80px;
+                height: 80px;
+                background-color: red;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+            nav {
+                width: 300px;
+                height: 80px;
+                background-color: yellow;
+                position: absolute;
+                left: 150px;
+                top: 100px;
+            }
+            #login {
+                width: 100px;
+                height: 50px;
+                background-color: blue;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div id="logo">LOGO</div>
+            <nav>nav 블록 외에는 속성이 없음</nav>
+            <!--
+            div: 그냥 영역을 묶는 용도. 의미 없음.
+            nav: 메뉴, 목차, 페이지 이동 링크처럼 내비게이션 영역이라는 의미를 가짐
+            -->
+            <div id="login">LOGIN</div>
+        </header>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1:nth-of-type(3) {
+            color: red;
+            /* h1 중에서 3번째 h1한테 red */
+        }
+        h1:first-of-type {
+            color: blue;
+            /* h1 중에서 1번째 h1한테 blue */
+        }
+        h1:last-of-type {
+            color: orange;
+            /* h1 중에서 마지막 h1한테 orange */
+        }
+        div {
+        /* div는 블록 속성 외에는 기본적으로 아무런 속성이 없음 */
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            line-height: 100px;
+            /* 텍스트를 표 상/하 가운데 맞추기 위해서, 텍스트 행간을 표 행간과 동일하게 맞춤 */
+
+            /* border-radius: 20px; */
+            /* 박스 모서리 둥글게. 원은 width랑 height값의 절반이 들어가면 원이 됨 */
+            border-radius: 10px 20px 5px 30px;
+            /* 순서는 왼쪽 위부터 시계방향. 0은 px을 입력하지 않음. 반복된다면 2앞의 2개(왼쪽,오른쪽 위)만 입력해도 적용됨 */
+        }
+    </style>
+</head>
+<body>
+    <h1>11111111</h1>
+    <h2>22222222</h2>
+    <h3>333333333</h3>
+    <h1>111111</h1>
+    <h1>11111111111111</h1>
+    <h2>22222</h2>
+
+    <div>박스</div>
+</body>
+</html>

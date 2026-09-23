@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                list-style: none;
+            }
+
+            #wrap {
+                width: 600px;
+                height: 600px;
+                background-color: greenyellow;
+                margin: 0 auto;
+                /*
+                margin: 0 auto. 항상 가운데정렬. ⭐암기
+                width값이 없으면 가운데 정렬이 안됨. 왜? 기본값이 가로폭이 최대치이기 때문
+                */
+                padding: 30px;
+            }
+            li {
+                width: 100px;
+                height: 100px;
+                float: left;
+                margin: 10px;
+            }
+            li:nth-child(1) {
+                background-color: red;
+            }
+            li:nth-child(2) {
+                background-color: blue;
+            }
+            li:nth-child(3) {
+                background-color: yellow;
+            }
+            li:nth-child(4) {
+                background-color: grey;
+            }
+            li:nth-child(5) {
+                background-color: teal;
+            }
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+    </div>
+</body>
+</html>

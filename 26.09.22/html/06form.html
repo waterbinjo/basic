@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>게시판</p>
+        <textarea cols="30" rows="10"></textarea>
+        <!--
+        textarea는 게시판, 댓글, 글쓰기 등에서 사용되는 태그
+        cols는 열의 개수, rows는 행의 개수
+        -->
+    </form>
+
+    <hr>
+    <select>
+        <option value="car">자동차 선택</option>
+        <option value="kia">KIA</option>
+        <option value="hundai">HUNDAI</option>
+        <option value="samsung">SAMSUNG</option>
+        <option value="bmw">BMW</option>
+        <option value="bentz">BENTZ</option>
+    </select>
+    <!-- option은 선택지를 나타냄 -->
+
+    <hr>
+    <form action="">
+        <input type="file" />
+        <!-- 파일 업로드 -->
+    </form>
+
+    <hr>
+    <form action="">
+        <input type="file" accept="image/*" /><br>
+        <!-- accept 속성은 업로드할 수 있는 파일의 종류를 제한함 -->
+        <!-- 이미지 파일만 업로드 가능 -->
+        
+        <input type="text" placeholder="검색하시오" /><br>
+        <!-- placeholder 속성은 입력 필드에 대한 힌트 텍스트를 제공함 -->
+        
+        <input type="text" placeholder="검색하시오" autofocus /><br>
+        <!-- autofocus 속성은 페이지가 로드될 때 입력 필드에 자동으로 포커스를 맞춤. 여기 입력하라고 커서 깜빡거림 -->
+        
+        <input type="text" placeholder="반가워" readonly /><br>
+        <!-- readonly 속성은 입력 필드를 읽기 전용으로 만듦, 입력 불가 -->
+    </form>
+</body>
+</html>

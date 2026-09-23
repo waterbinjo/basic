@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /* 방법 1 */
+            ul.submenu {
+                display: none;
+            }
+            ul.mainmenu > li:hover > ul.submenu  {
+                display: block;
+            }
+            /*
+            기본적으로 ul.submenu는 숨겨져 있다가
+            이름이 mainmenu ul의
+            자식인 li에 커서를 올리면(hover)
+            li의 자식인 ul.submenu가 나타남(display: block)
+            ⭐부등호 표시를 꼭 써줘야함. 안써주면 하위 애들까지 함께 묶임
+            */
+            
+            /* 방법 2 */
+            /* ul.submenu {
+                opacity: 0;
+            }
+            ul.mainmenu > li:hover > ul.submenu {
+                opacity: 1;
+            } */
+            /* 방법1과 개념은 같지만, opacity라서 ul.submenu가 살짝 부드럽게 나타남. 방법2는 현재 주석처리라 안보이는 것 */
+        </style>
+
+    </head>
+    <body>
+        <h1>서브메뉴</h1>
+        <ul class="mainmenu">
+            <li>
+                main_menu01
+                <ul class="submenu">
+                    <li>sub_menu01</li>
+                    <li>sub_menu02</li>
+                    <li>sub_menu03</li>
+                </ul>
+            </li>
+            <li>
+                main_menu02
+                <ul class="submenu">
+                    <li>sub_menu01</li>
+                    <li>sub_menu02</li>
+                    <li>sub_menu03</li>
+                </ul>
+            </li>
+            <li>
+                main_menu03
+                <ul class="submenu">
+                    <li>sub_menu01</li>
+                    <li>sub_menu02</li>
+                    <li>sub_menu03</li>
+                </ul>
+            </li>
+            <li>
+                main_menu04
+                <ul class="submenu">
+                    <li>sub_menu01</li>
+                    <li>sub_menu02</li>
+                    <li>sub_menu03</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

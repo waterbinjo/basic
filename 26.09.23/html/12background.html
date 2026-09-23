@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div#box1 {
+                width: 400px;
+                height: 400px;
+                background-color: yellow;
+                background-image: url(../img/button.png);
+                /* 백그라운드에 이미지를 넣음. 다만 이렇게 하면 남은 영역에 이미지가 반복됨(기본값) */
+                background-repeat: no-repeat;
+                /* 이미지 반복X */
+                background-position: right bottom;
+                /* 이미지 위치. x/y축. 단위: px, %, center, right, left */
+                margin-bottom: 20px;
+
+                /* background 축약형 */
+                background: url(../img/button.png) no-repeat right bottom;
+                /*
+                순서: 이미지, 이미지 반복x, 오른쪽아래
+                축약형에 컬러는 입력안됨
+                */
+                background-color: yellow;
+                margin-bottom: 20px;
+            }
+            div#box2 {
+                width: 400px;
+                height: 400px;
+                background-color: green;
+                background-image: url(../img/cat03.jpg);
+                background-size: cover;
+                /*
+                100%; -> 사진을 잘리지 않고, 박스 안에 넣기
+                contain -> 100%와 거의 동일
+                cover -> 박스 안에 사진을 꽉 차게 넣음. 다만, 사진이 잘림
+                */
+                background-repeat: no-repeat;
+            }
+            div#box3 {
+                width: 600px;
+                height: 300px;
+                background: grey;
+                background-image: url(https://i.pinimg.com/1200x/2e/10/0f/2e100f2e20a84a776301f0b7b34e1f18.jpg);
+                /* 사이트에서 우클릭-이미지 주소복사 해서 주소 넣어도 됨. 다만, 여기서 링크를 지우면 이미지를 못 찾게됨.. */
+                background-size: 100%
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../img/cat02.jpg" alt="" width="300" />
+        <p>text</p>
+        <div id="box1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</div>
+        <div id="box2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</div>
+        <div id="box3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    </body>
+</html>
