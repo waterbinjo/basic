@@ -1,0 +1,268 @@
+/* font import는 css에 붙여넣기*/
+/*   font-family: "Playfair Display", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* font-family: "Oswald", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #0a0a0a;
+}
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* layout */
+#header {
+    width: 960px;
+    height: 160px;
+    background: #ff0831;
+    margin: 0 auto; /* 중앙정렬 */
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+#main {
+    width: 960px;
+    background: #ffbed49d;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    background: #dfdfdf;
+    margin: 0 auto;
+}
+
+/* header */
+#title {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+#title h1 {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    line-height: 1;
+}
+#title h2 {
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    text-transform: lowercase;
+    line-height: 1; /* 행간 */
+    letter-spacing: -0.5; /* 자간 */
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#nav ul.gnb {
+    display: flex;
+}
+#nav ul.gnb li {
+}
+#nav ul.gnb li a {
+    display: block;
+    /* 상하좌우 레이아웃을 변경하려면 반드시 블록으로 바꿔줘야함 */
+    padding: 8px 10px;
+    border: 1px solid #000;
+    background-color: #7effff;
+    font-size: 14px;
+}
+/* border-radius를 양쪽 끝에만 주는 방법 */
+#nav ul.gnb li:first-child a {
+    border-radius: 10px 0 0 10px;
+}
+#nav ul.gnb li:last-child a {
+    border-radius: 0 10px 10px 0;
+}
+/* ⭐li가 블록 속성을 가지고 있으니 li의 첫번째와 마지막에 radius를 준다⭐ */
+#nav ul.gnb li a:hover {
+    background-color: #fff;
+    color: #0000ff;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#nav ul.lnb {
+    display: flex;
+}
+#nav ul.lnb li {
+}
+#nav ul.lnb li a {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #000;
+    background-color: #ff8e8e;
+}
+#nav ul.lnb li:first-child a {
+    border-radius: 15px 0 0 15px;
+}
+#nav ul.lnb li:last-child a {
+    border-radius: 0 15px 15px 0;
+}
+#nav ul.lnb li a:hover {
+    background-color: #fff;
+    color: #0000ff;
+    font-weight: 700;
+    /* blod 대신 폰트마다 가지고 있는 두께의 숫자로 써도 됨 */
+}
+
+
+/********* main *********/
+#contents {
+    background-color: #fcf7fa;
+    border: 1px solid #000;
+    flex: 1; /* 나머지 공간을 가져가는 것 */
+    /* width: 70%; */
+    /* 메인 width가 960px 그중의 70%차지하는 것 */
+}
+#aside {
+    background-color: #aaecde;
+    border: 1px solid #000;
+    width: 25%;
+}
+
+#contents .article {
+    padding: 20px; /* 상하좌우에 여백 */
+}
+#contents .article h2 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    /* 텍스트에 밑줄 넣기 */
+    border-bottom: 1px solid #000;
+    width: 200px;
+    /* width값을 주면 밑줄 길이 조정 가능 */
+    padding-bottom: 10px; /* 텍스트 아래에 여백주기 위해 넣음 */
+}
+#contents .article p {
+    line-height: 1.6;
+    letter-spacing: -0.1px; 
+}
+
+/*** main > aside ***/
+
+/* 탭 선택: 선택된 input의 div만 보이게 하기 */
+/* first tab */
+input:nth-of-type(1) {
+    display: none;
+} /* 첫 번째 input을 화면에서 숨겨라는 뜻 */
+input:nth-of-type(1) ~ div:nth-of-type(1) {
+    display: none;
+} /* 두 번째 input 이후의 두 번째 div를 안 보이게 함  */
+input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+    display: block;
+} /* 첫 번째 input이 체크되면, 뒤에 있는 첫 번째 div를 보이게 해라는 뜻 */
+
+/* second tab */
+input:nth-of-type(2) {
+    display: none;
+}
+input:nth-of-type(2) ~ div:nth-of-type(2) {
+    display: none;
+}
+input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+    display: block;
+}
+
+/*** main > 탭 모양 만들기 ***/
+.button {
+    display: flex;
+}
+.button label {
+    /* display: block; */
+    width: 50%; /* aside의 절반이라는 뜻 */
+    height: 40px;
+    border: 1px solid #000;
+
+    /* text-align: center;
+    line-height: 40px; */
+    font-size: 18px;
+    font-weight: bold;
+    
+    /* 텍스트 위치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button label.first {
+    border-right: 1px solid #000;
+    background-color: #0f5f08;
+    color: #df7fba;
+}
+.button label.second {
+    background-color: #0f5f08;
+    color: #df7fba;
+}
+
+input:nth-of-type(1):checked ~ .button label.first {
+    background-color: #df7fba;
+    color: #0f5f08;
+}
+input:nth-of-type(2):checked ~ .button label.second {
+    background-color: #df7fba;
+    color: #0f5f08;
+}
+
+
+/*** main > 탭 아이템 ***/
+.tab_item ul li {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+}
+.tab_item ul li a {
+    display: flex;
+}
+.tab_item ul li a .thumnail {
+    margin-right: 10px;
+}
+.tab_item ul li a .description {
+}
+.tab_item ul li a .description strong {
+    display: block;
+    color: #000;
+    margin-bottom: 5px;
+    
+    /* 넘치는 텍스트 생략 삼총사 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 여기까지만 쓰면 효과 없음. 꼭 whith값을 입력해줘야햠 */
+    width: 140px;
+}
+.tab_item ul li a .description em {
+    font-size: normal;
+    font-size: 14px;
+}
+
+
+/* footer */
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#footer address {
+    font-style: normal;
+    /* html한테 준 address 이텔릭체가 싫으면 normal로 변겨 */
+}

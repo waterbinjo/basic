@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>탭 레이아웃</title>
+    </head>
+    <body>
+        <header id="header">
+            <div id="title">
+                <h1>Web Design</h1>
+                <h2>HTML5+CSS3</h2>
+            </div>
+            <nav id="nav">
+                <!-- ul.gnb>li*5>a[href=#] -->
+                <ul class="gnb">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">Q&amp;A</a></li>
+                    <li><a href="#">게시판</a></li>
+                    <li><a href="#">배송조회</a></li>
+                </ul>
+                <!-- ul.lnb>li*5>a[href=#] -->
+                <ul class="lnb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <section id="contents">
+                <!-- class는 이름 반복적으로 해도 ㄱㅊ -->
+                <article class="article">
+                    <h2>Main article</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</p>
+                </article>
+                <article class="article">
+                    <h2>Main article</h2>
+                    <p>Senectus et netus et malesuada. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Neque convallis a cras semper auctor. Libero id faucibus nisl tincidunt eget. Leo a diam sollicitudin tempor id. A lacus vestibulum sed arcu non odio euismod lacinia. In tellus integer feugiat scelerisque. Feugiat in fermentum posuere urna nec tincidunt praesent. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Et malesuada fames ac turpis egestas sed. Sit amet nisl suscipit adipiscing bibendum est ultricies. Arcu ac tortor dignissim convallis aenean et tortor at. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Eros donec ac odio tempor orci dapibus ultrices. Elementum nibh tellus molestie nunc. Et magnis dis parturient montes nascetur. Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.</p>
+                </article>
+                <article class="article">
+                    <h2>Main article</h2>
+                    <p>Sit amet nulla facilisi morbi tempus. Nulla facilisi cras fermentum odio eu. Etiam erat velit scelerisque in dictum non consectetur a erat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ut sem nulla pharetra diam. Fames ac turpis egestas maecenas. Bibendum neque egestas congue quisque egestas diam. Laoreet id donec ultrices tincidunt arcu non sodales neque. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Faucibus interdum posuere lorem ipsum dolor sit.</p>
+                </article>
+            </section>
+            <aside id="aside">
+                    <!-- 텍스트를 클릭해도 선택 가능. checked 넣으면 선택된 상태 -->
+                    <input type="radio" name="tab" id="first" checked>
+                    <input type="radio" name="tab" id="second">
+                    
+                <section class="button">
+                    <label for="first" class="first">FIRST</label>
+                    <label for="second" class="second">SECOND</label><br>
+                </section>
+
+                <div class="tab_item">
+                    <!-- ul>li*4>a[href=#] -->
+                    <ul>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>1. nike Faucibus interdum posuere lorem ipsum dolor sit.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>1. nike Faucibus interdum posuere lorem ipsum dolor sit.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>1. nike Faucibus interdum posuere lorem ipsum dolor sit.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>1. nike Faucibus interdum posuere lorem ipsum dolor sit.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab_item">
+                    <!-- ul>li*4>a[href=#] -->
+                    <ul>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>2. adidas Eget felis eget nunc lobortis mattis aliquam faucibus purus.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>2. adidas Eget felis eget nunc lobortis mattis aliquam faucibus purus.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>2. adidas Eget felis eget nunc lobortis mattis aliquam faucibus purus.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="thumnail">
+                                <img src="https://placehold.co/45x45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>2. adidas Eget felis eget nunc lobortis mattis aliquam faucibus purus.</strong>
+                                <em>2026.09.29</em>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <p>copyright &copy; Waterbin Jo</p>
+            <address>서울시 강동구 천호동 나비쇼핑몰 8층</address>
+            <!-- address는 이텔릭체 속성 -->
+        </footer>
+        <!-- //footer -->
+    </body>
+</html>

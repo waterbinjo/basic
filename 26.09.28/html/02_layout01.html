@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>layout - flex</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #wrap {
+                width: 900px;
+                margin: 0 auto; /* 암기!!!!!!!! 브라우저의 가운데 */
+                /*
+                여기에 height값을 주면 마진에도 백그라운드 컬러가 됨
+                부모한테는 height값을 주지 않는 것이 맞음. */
+                background-color: #79fff8;
+                margin-bottom: 10px;
+            }
+            #header {
+                /* width: 900px; */
+                height: 80px;
+                background-color: #5ce90a;
+                margin-bottom: 10px;
+                /* nav, content에 마진값을 함께 주려면 header에 마진을 주면 둘 다 마진을 줌. */
+            }
+            #main {
+                /* width: 900px; */
+                display: flex;
+                gap: 10px
+            }
+            #nav {
+                width: 300px;
+                height: 500px;
+                background-color: #ffc400;
+                /*
+                float은 nav, content 둘 다 해야함.
+                가로로 더 많아지면 전부 줘야함.
+                근데 이걸 주는 순간 형제 속성인 'footer'의 색상이 없어짐⭐ */
+            }
+            #content {
+                width: 590px;
+                /*
+                전체 900px(wrap)에서 nav와 header의 마진값이 추가 되었으니 그만큼 크기가 작아져야함
+                (마진+크기 = 전체 크기)
+                */
+                height: 500px;
+                background-color: #9437ff;
+            }
+            #footer {
+                /* width: 900px; */
+                height: 80px;
+                background-color: #132bff;
+            }
+            /*
+            width는 부모한테 상속받음
+            height는 자식이 결정하는 만큼 부모도 늘어남 */
+        </style>
+    </head>
+
+    <body>
+        <!-- #wrap -->
+        <div id="wrap">
+            <!-- 그냥 header, nav, section, footer만 써도 괜찮음. 지금은 id값으로 이름을 준 거임 -->
+            <header id="header">header</header>
+            <!-- main#id. main안에 nav와 content들을 집어넣기. footer 제외 -->
+            <main id="id">
+                <nav id="nav">nav</nav>
+                <section id="content">content</section>
+            </main>
+            <footer id="footer">footer</footer>
+        </div>
+    </body>
+</html>

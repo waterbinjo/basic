@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #wrap {
+                width: 1000px;
+                height: 600px;
+                background-color: #ce0808;
+                display: flex;
+                /*
+                'display: flex'는 자동으로 가로로 정렬됨. 꼭 부모한테 줘야함
+                자식의 갯수를 늘려도 부모의 크기 안에 무조건 들어감. -> 그래서 자식의 width값에 영향을 안받음
+                */
+                /* flex-wrap: wrap; */
+                
+                flex-direction: column; /* 축이 세로로 변경 */
+                justify-content: space-around; /* center 축이 가운데로 변경.  */
+                align-items: center; /* 축의 센터로 이동 */
+                /*
+                justify-content = 주축 방향 정렬
+                align-items = 교차축 방향 정렬
+                */
+                
+            }
+            #wrap > div {
+                width: 200px;
+                height: 100px;
+                background-color: #02f5e1;
+                border: 1px solid #000;
+                box-sizing: border-box;
+                /* float: left; */
+                /*
+                box-sizing: borde-box를 넣으면 solid가 안쪽으로 생김.
+                box-sizing를 넣으면 토탈이 100px. 안넣으면 solid 1px 추가로 101px이 됨
+                (!float: left;! 쓰지 말 것. 글 흐름용. 여기는 레이아웃)
+                */
+
+                display: flex;
+                justify-content: center; /* 축이 가운데 */
+                align-items: center; /* 축이 센터로  */
+                /*
+                원래 이렇게 썼는데, 이러면 width, height값이 변경 될 때마다 변경해줘야해서 안씀
+                text-align: center;
+                line-height: 100px;
+                */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- div*10{BOX$} -->
+            <div>BOX1</div>
+            <div>BOX2</div>
+            <div>BOX3</div>
+        </div>
+    </body>
+</html>

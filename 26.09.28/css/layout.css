@@ -1,0 +1,186 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: border-box를 넣으면 padding을 넣어도
+    width, height값 유지 */
+
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* header */
+#header {
+    width: 760px;
+    height: 160px;
+    background-color: #da5bda;
+    padding: 10px;
+    display: flex;
+    /* 부모 요소를 Flex 컨테이너로 만들어서, 그 안의 자식 요소들을 쉽게 배치할 수 있게 하는 속성 */
+    justify-content: space-between;
+    /* 자식 요소들을 사이에 동일한 간격을 줌 */
+    margin: 0 auto;
+}
+#logo {
+    width: 160px;
+    height: 140px;
+    background-color: yellow;
+}
+#nav {
+    display: flex;
+    flex-direction: column;
+    /* Flex 자식들을 세로 방향으로 배치 */
+    justify-content: space-between;
+    /* 요소들(gnb, lnb) 사이에 동일한 간격을 둠 */
+    align-items: flex-end;
+    /* 반대축, 오른쪽으로. */
+}
+#gnb {
+    width: 320px;
+    height: 30px;
+    background-color: #caff5f;
+}
+#lnb {
+    width: 570px;
+    height: 50px;
+    background-color: #00eeff;
+    padding: 10px;
+}
+#lnb ul {
+    display: flex;
+    /* gap: 10px; */
+    /*
+    블록마다 양쪽에 동일한 마진 값 주는 방법
+    1) gap
+    2) justify-content: space-between
+    3) margin-right:10px 주고, last-child한테만 0px
+    */
+    justify-content: space-between;
+}
+#lnb ul li {
+    width: 130px;
+    height: 30px;
+    /* margin-right: 10px;*/
+}
+/* #lnb ul li:last-child {
+    margin-right: 0;
+} */
+#lnb ul a {
+    width: 130px;
+    height: 30px;
+    color: #000;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    /* 텍스트 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lnb ul a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+/* main */
+#main {
+    width: 760px;
+    display: flex;
+    /*
+    부모 요소를 flex 컨테이너로 만들어서, 그 안의 자식 요소들을 쉽게 배치
+    부모는 mian
+    자식은 section
+    */
+    flex-wrap: wrap;
+    /* flex 자식들이 한 줄에 다 안 들어갈 때 다음 줄로 넘기게 하는 속성 */
+    gap: 10px;
+    /* scetion들 사이에 마진값 주기 */
+    background-color: pink;
+    padding: 10px;
+    /* main에 마진값 주기
+    초기화 값에 box-sizing: border-box;에 들어가서 안쪽으로 들어감 */
+    margin: 0 auto;
+}
+#main > section {
+    /*
+    main의 자식인 section한테 주는 속성값들
+    */
+    border: 1px solid #000;
+    padding: 10px;
+}
+/* #main > section:not(#section01) {
+    
+    border: 1px solid #000;
+    padding: 10px;
+}
+지정할거면 section01에 이름 넣으면 됨*/
+#main > section:first-child{
+    padding: 0;
+}
+#section01 {
+    width: 740px;
+    height: 250px;
+}
+#section02 {
+    width: 490px;
+    height: 160px;
+}
+#section03 {
+    width: 240px;
+    height: 160px;
+}
+#section04 {
+    width: 240px;
+    height: 160px;
+}
+#section05 {
+    width: 240px;
+    height: 160px;
+}
+#section06 {
+    width: 240px;
+    height: 160px;
+}
+#section07 {
+    width: 240px;
+    height: 160px;
+    background-image: url(https://placehold.co/220x80);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+#section08 {
+    width: 490px;
+    height: 160px;
+    background: url(https://placehold.co/230x140) no-repeat 10px 10px;
+}
+
+/* footer */
+#footer {
+    width: 760px;
+    height: 80px;
+    background-color: #91e5ff;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 auto;
+}
+#footer > div {
+    border: 1px solid #000;
+}
+#footer_box01 {
+    width: 190px;
+    height: 60px;
+    background-color: #fff;
+}
+#footer_box02 {
+    width: 540px;
+    height: 30px;
+    background-color: #fff;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>layout02 - float</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #wrap {
+                width: 900px;
+                margin: 0 auto;
+            }
+            #header {
+                width: 290px;
+                height: 600px;
+                background-color: #e90303;
+                float: left;
+                /* header 옆에 section01,02,03이 붙으려면 header, section01,02,03 모두 float:left를 줘야함 */
+                margin-right: 10px;
+            }
+            #section01 {
+                width: 600px;
+                height: 100px;
+                background-color: #00ff73;
+                float: left;
+            }
+            #section02 {
+                width: 600px;
+                height: 380px;
+                /* 마진을 위 아래 10px을 줬기 때문에 height값에서 margint값을 빼야함*/
+                background-color: #f3e742;
+                float: left;
+                margin: 10px 0;
+                /* 반복될 때는 2개만 입력해도 반복됨. 순서: 위, 오른쪽, 아래, 왼쪽 */
+            }
+            #section03 {
+                width: 600px;
+                height: 100px;
+                background-color: #f3427d;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">header</header>
+                <section id="section01">section01</section>
+                <section id="section02">section02</section>
+                <section id="section03">section03</section>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>layout02 - float</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #wrap {
+                width: 900px;
+                margin: 0 auto;
+                display: flex;
+                /* 부모 옆으로 자식이 옆으로 붙게함 */
+                /* gap: 10px */
+                justify-content: center;
+                /* gap 또는 justify-content: space-between 둘 중 하나 써도 되는데 gap은 계산을 해야함 */
+                /*
+                justify-content 종류
+                1) flex-start → 왼쪽 정렬
+                2) center → 가운데 정렬
+                3) flex-end → 오른쪽 정렬
+                4) flex-end → 오른쪽 정렬
+                5) space-around → 각 요소 주변에 간격
+                6) - space-evenly → 모든 간격이 완전히 동일
+                */
+                flex-direction: column;
+            }
+            #header {
+                width: 900px;
+                height: 100px;
+                background-color: #e90303;
+                /* margin-right: 10px; */
+                float: left;
+            }
+            #section01 {
+                width: 300px;
+                height: 380px;
+                background-color: #00ff73;
+                float: left;
+            }
+            #section02 {
+                width: 300px;
+                height: 380px;
+                /* 마진을 위 아래 10px을 줬기 때문에 height값에서 margint값을 빼야함*/
+                background-color: #f3e742;
+                /* margin: 10px 0; */
+                /* 반복될 때는 2개만 입력해도 반복됨. 순서: 위, 오른쪽, 아래, 왼쪽 */
+                float: left;
+            }
+            #section03 {
+                width: 300px;
+                height: 380px;
+                background-color: #f3427d;
+                float: left;
+            }
+            #footer {
+                width: 900px;
+                height: 100px;
+                background-color: #2dfa37;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">header</header>
+                <main id="main">
+                    <section id="section01">section01</section>
+                    <section id="section02">section02</section>
+                    <section id="section03">section03</section>
+                </main>
+        </div>
+        <footer id="footer">footer</footer>
+    </body>
+</html>
